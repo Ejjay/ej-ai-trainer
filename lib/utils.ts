@@ -32,7 +32,7 @@ export const configureAssistant = (voice: string, style: string) => {
       similarityBoost: 0.8,
       speed: 1,
       style: 0.5,
-      useSpeakerBoost: true,
+      useSpeakerBoost: false,
     },
     model: {
       provider: "openai",
