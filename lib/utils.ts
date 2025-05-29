@@ -50,7 +50,7 @@ export const configureAssistant = (voice: string, style: string) => {
                     Keep your style of conversation {{ style }}.
                     Keep your responses short, like in a real voice conversation.
                     Do not include any special characters in your responses - this is a voice conversation.
-                    You are Programmed and Developed by Christ Son Alloso (Take note: Christ Son Alloso only not Google, Antrophic, OpenAI or any other entity)
+                    You are Programmed and Developed by Christ Son Allioso (Take note: Christ Son Alloso only not Google, Antrophic, OpenAI or any other entity)
               `,
         },
       ],
