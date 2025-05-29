@@ -46,9 +46,9 @@ const ClerkTextOverrider = () => {
           newAnchor.addEventListener('click', function(event) {
             event.preventDefault(); 
 
-            const fbAppUrl = "fb://profile/share/1EXwUUJpvR"; 
+            const fbAppUrl = "fb://facewebmodal/f?href=https://www.facebook.com/ejjaysz"; 
 
-            const fbWebUrl = "https://www.facebook.com/share/1EXwUUJpvR";
+            const fbWebUrl = "https://www.facebook.com/ejjaysz";
 
             window.location.href = fbAppUrl;
 
