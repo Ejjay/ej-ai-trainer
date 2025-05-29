@@ -6,7 +6,7 @@ const ClerkTextOverrider = () => {
   useEffect(() => {
     const overrideClerkText = () => {
       const paragraphs = document.querySelectorAll('p');
-      let targetElement: HTMLParagraphElement | null = null;
+      let targetTextElement: HTMLParagraphElement | null = null;
 
       paragraphs.forEach(p => {
         if (p.textContent === "Development mode") {
@@ -20,21 +20,34 @@ const ClerkTextOverrider = () => {
             parent = parent.parentElement;
           }
           if (isLikelyClerkComponent) {
-            targetElement = p;
+            targetTextElement = p;
           }
         }
       });
 
-      if (targetElement) {
-        targetElement.textContent = "Alloso mode";
+      if (targetTextElement) {
+        targetTextElement.textContent = "Developed by Christ Son Alloso";
+      }
+    };
+
+    const overrideClerkLink = () => {
+      const clerkLogoLink = document.querySelector<HTMLAnchorElement>(
+        'a[aria-label="Clerk logo"][href="https://go.clerk.com/components"]'
+      );
+
+      if (clerkLogoLink) {
+        clerkLogoLink.href = "https://facebook.com/ejjaysz";
       } else {
       }
     };
 
+    // Run both override functions initially
     overrideClerkText();
+    overrideClerkLink();
 
     const observer = new MutationObserver((mutationsList) => {
-        overrideClerkText();
+      overrideClerkText();
+      overrideClerkLink();
     });
 
     const config = { childList: true, subtree: true };
