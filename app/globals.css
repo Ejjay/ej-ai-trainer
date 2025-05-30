@@ -4,6 +4,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html, body {
+     touch-action: none;
+     -webkit-touch-callout: none;
+     -webkit-user-select: none;
+     user-select: none;
+}
+
 :root {
   --primary: #fe5933;
 
@@ -224,3 +231,5 @@ body {
     scrollbar-width: none;
   }
 }
+
+
