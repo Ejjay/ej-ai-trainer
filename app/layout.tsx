@@ -4,7 +4,6 @@ import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ClerkTextOverrider from "@/components/ClerkTextOverrider";
-import { useEffect } from "react";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -22,12 +21,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  useEffect(() => {
-    document.documentElement.style.setProperty("touch-action", "none");
-    document.body.style.setProperty("touch-action", "none");
-    document.documentElement.style.setProperty("-webkit-overflow-scrolling", "touch");
-  }, []);
-
   return (
     <html lang="en">
       <head>
