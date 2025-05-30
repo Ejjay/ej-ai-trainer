@@ -3,7 +3,7 @@ import { Bricolage_Grotesque } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
-import ClerkTextOverrider from "@/components/ClerkTextOverrider"; 
+import ClerkTextOverrider from "@/components/ClerkTextOverrider";
 
 const bricolage = Bricolage_Grotesque({
   variable: "--font-bricolage",
@@ -13,6 +13,7 @@ const bricolage = Bricolage_Grotesque({
 export const metadata: Metadata = {
   title: "Converso",
   description: "Real-time AI Teaching Platform",
+  manifest: "/manifest.json", 
 };
 
 export default function RootLayout({
@@ -22,11 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="theme-color" content="#fe5933" />
+      </head>
       <body className={`${bricolage.variable} antialiased`}>
         <ClerkProvider appearance={{ variables: { colorPrimary: '#fe5933' }} }>
           <Navbar />
           {children}
-          <ClerkTextOverrider /> 
+          <ClerkTextOverrider />
         </ClerkProvider>
       </body>
     </html>
